@@ -5,9 +5,9 @@
 - [x] Create a basic docker image (ubuntu)
 - [x] Create initialization script
 - [x] Launch docker GUI with Firefox
-- [ ] Provide a mechanism to bring up N number docker instances based on user's input via python scripts
-- [ ] Provide a mechanism for user to provide input on the landing page (TBD)
-- [ ] Provide a mechanism to on how long to play a particular video streaming based on user's input via python scripts (in the length of minutes)
+- [ ] Provide a mechanism to bring up N number docker instances based on user's input via python scripts [**Derrick**]
+- [ ] Provide a mechanism for user to provide input on the landing page (TBD) 
+- [ ] Provide a mechanism to on how long to play a particular video streaming based on user's input via python scripts (in the length of minutes) [**Derrick**]
 
 - [ ] Ensure docker GUI can be launched 
 
@@ -17,7 +17,7 @@
 
   
 
-## YouTube Play Bot (Module B)
+## YouTube Play Bot (Module B) - (one sub module: **Kok Suan**)
 
 This module will be executing play command on a randomized length (between 1-5 minutes. Configurable via configuration file)
 
@@ -35,7 +35,7 @@ This module will be executing play command on a randomized length (between 1-5 m
 
   
 
-## Scrap YouTube Playlist module (Module C)
+## Scrap YouTube Playlist module (Module C) - **Kok Suan**
 
 - [ ] Scrap Youtube page and take a list of links with "/watch?v=" keywords
 
@@ -61,7 +61,7 @@ This module will be executing play command on a randomized length (between 1-5 m
 
   
 
-## Main Python Module (Module D)
+## Main Python Module (Module D) - **Jon**
 
 - [ ] To process user input
   - Process number of docker instances to launch
