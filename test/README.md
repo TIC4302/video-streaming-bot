@@ -63,7 +63,8 @@ Perform the following to create a docker
 
 - run sudo docker images
 
-  ![Docker Images](.\images\image-20210225211541906.png)
+  ![DockerImages](./images/image-20210225211541906.jpg)
+
 
 - docker image name videobot with version/tag 1 is created
 
