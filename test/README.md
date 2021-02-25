@@ -63,7 +63,7 @@ Perform the following to create a docker
 
 - run sudo docker images
 
-  ![image-20210225211541906](C:\Source\NUS\TIC4302\ActualTIC4302VideoStreamBot\test\images\image-20210225211541906.png)
+  ![Docker Images](.\images\image-20210225211541906.png)
 
 - docker image name videobot with version/tag 1 is created
 
