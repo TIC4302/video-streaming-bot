@@ -61,6 +61,8 @@ Perform the following to create a docker
   Successfully built 1f17623498d0
   Successfully tagged videobot:1
 
+  ![DockerImages](./images/image-202102252152.jpg)
+  
 - run sudo docker images
 
   ![DockerImages](./images/image-20210225211541906.jpg)
