@@ -69,7 +69,7 @@ Perform the following to create a docker
 
 
 - docker image name videobot with version/tag 1 is created
-- to run the newly built docker, execute the following command: sudo docker run -it -rm videobot:1 bash
+- to run the newly built docker, execute the following command: sudo docker run -it --rm videobot:1 bash
 
 #### Test Case:  02 - Usage of Main.py
 
