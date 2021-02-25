@@ -63,7 +63,7 @@ This module will be executing play command on a randomized length (between 1-5 m
 
 ## Main Python Module (Module D) - **Jon**
 
-- [ ] To process user input
+- [x] To process user input
   - Process number of docker instances to launch
   - Process number of Play time
   - Process capturing the URL information
