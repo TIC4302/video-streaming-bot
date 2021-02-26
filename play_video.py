@@ -30,7 +30,7 @@ player.play()
 good_states = ["State.Playing", "State.NothingSpecial", "State.Opening"]
 end_states = "State.Ended"
 while str(player.get_state()) in good_states:
-    	if (player.get_state() == end_states):
+	if (player.get_state() == end_states):
 		break
 
 #get metadata of video

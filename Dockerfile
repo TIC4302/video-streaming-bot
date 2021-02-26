@@ -25,7 +25,7 @@ RUN apt-get install -y --no-install-recommends \
 	usermod -a -G audio,video vlc && \
 	rm -rf /var/lib/apt/lists/*
 
-ADD helloworld.py /home/play_video.py
+ADD play_video.py /home/play_video.py
 COPY . .
 CMD ["/home/play_video.py"]
 
