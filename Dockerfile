@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM ubuntu:latest as builder
 
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get install firefox -y && apt-get install xauth -y
@@ -27,13 +27,11 @@ RUN apt-get install -y --no-install-recommends \
 
 ADD play_video.py /home/play_video.py
 COPY . .
-CMD ["/home/play_video.py"]
-
 USER vlc
 
-#WORKDIR /home/vlc/media
-
-#ENTRYPOINT ["vlc", "--no-qt-privacy-ask", "--no-metadata-network-access", "--snapshot-path=/home/vlc/snapshots"]
+#CMD ["bash"] #uncomment if want to use bash in docker for troubleshooting
+CMD ["/home/play_video.py"] 
+#ENTRYPOINT ["python3", "/home/play_video.py", "-i", "https://www.youtube.com/watch?v=FUiu-cdu6mA"]
 ENTRYPOINT ["python3"]
-#COPY init-script.bash /opt/program/init-script.bash
-#ENTRYPOINT /opt/program/init-script.bash && /usr/bin/firefox
+
+
