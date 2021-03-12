@@ -4,6 +4,7 @@
 ####                       ####
 ###############################
 
+import os
 import sys
 import csv
 import time
@@ -40,7 +41,7 @@ if arguments>=1:
 options = Options()
 options.add_argument('--headless')
 
-driver = webdriver.Firefox(options=options)
+driver = webdriver.Firefox(options=options, service_log_path=os.devnull )
 
 page_url="https://www.youtube.com/results?search_query="+query
 
