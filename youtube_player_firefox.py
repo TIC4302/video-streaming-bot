@@ -1,10 +1,15 @@
+import os
 import csv
+import sys
 import time
 import pandas as pd
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.firefox.options import Options
+from selenium.webdriver.support.ui import WebDriverWait 
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.common.exceptions import TimeoutException
 
 ## Function randomTimeGenerator()
 ##   randomise play time between minTime to maxTime               ##
@@ -42,6 +47,15 @@ def randomTimeGenerator( play_time ):
 ####                  ####
 ##########################
 
+####  headless geckodriver  ##
+options = Options()
+options.add_argument('-headless') 
+
+driver = webdriver.Firefox(options=options, service_log_path=os.devnull)
+
+profile = webdriver.FirefoxProfile()
+profile.set_preference("media.volume_scale", "0.0")
+
 ## original df before randomise           ##
 ## read in an output.csv of scraped links ##
 df = pd.read_csv('output.csv', index_col=None)
@@ -49,47 +63,58 @@ titles = df['Titles']
 url = df['URL']
 playtime = df['Time']
 numberOfTitles = len(df)
-print("df before randomise")
+print("Youtube titles before randomise")
 for i in range(0, numberOfTitles):
     print(titles[i].encode('unicode-escape').decode('utf-8'), url[i], playtime[i] )
 
+try:
+    while True:
+        ## df after randomised                    ##        
+        ## randomise rows of Titles and URL links ##
+        df = df.sample(frac=1).reset_index(drop=True)
+        titles = df['Titles']
+        url = df['URL']   
+        playtime = df['Time']
+           
+        ## print titles, links, time and random play video in the df list ##
+        playtimeRandom=[]
+        print("\nYoutube titles after randomised")
+        for i in range(0, numberOfTitles):
+            playtimeRandom.append( randomTimeGenerator( playtime[i] ) )
+            print(titles[i].encode('unicode-escape').decode('utf-8'), url[i], playtime[i], playtimeRandom[i])
 
-## df after randomised                    ##
-## randomise rows of Titles and URL links ##
-df = df.sample(frac=1).reset_index(drop=True)
-titles = df['Titles']
-url = df['URL']
-playtime = df['Time']
+        ## play video from random url and with random play time ##
 
-## print titles, links, time and random play video in the df list ##
-playtimeRandom=[]
-print("\ndf after randomised")
-for i in range(0, numberOfTitles):
-    playtimeRandom.append( randomTimeGenerator( playtime[i] ) )
-    print(titles[i].encode('unicode-escape').decode('utf-8'), url[i], playtime[i], playtimeRandom[i])
+        for i in range(0, numberOfTitles):
+            print("\nTitle:", titles[i])
+            print("URL:", url[i])
+            print("Playtime:", playtime[i] )
+            print("Random playtime:", playtimeRandom[i],"secs")
+            driver.get(url[i])
+            #time.sleep(1)
+            #driver.save_screenshot('./image'+str(i)+'.png')
+            WebDriverWait(driver, 3).until(EC.presence_of_element_located((By.CSS_SELECTOR,'.ytp-mute-button')))
+            #print(driver.find_element_by_css_selector('.ytp-mute-button').get_attribute('aria-label'))
+            if driver.find_element_by_css_selector('.ytp-mute-button').get_attribute('aria.label')=='Mute (m)':
+                #print("Original mute")
+                driver.find_element_by_css_selector('.ytp-mute-button').click()
+            else:
+                #print("Now mute")
+                pass
+            #video = driver.find_element_by_id('movie_player')
+            #video.send_keys(Keys.SPACE) #hits space
+            #video.click()               #mouse click
+            time.sleep(playtimeRandom[i])
+except KeyboardInterrupt:
+    pass
 
-####  headless geckodriver  ##
-options = Options()
-options.add_argument('--headless') 
+except TimeoutException:
+    print("Loading took too long....")
 
-driver = webdriver.Firefox(options=options)
+except Exception as e:
+    print("Encounter error:", e)
 
-## play video from random url and with random play time ##
-
-for i in range(0, numberOfTitles):
-    print("\nTitles:", titles[i])
-    print("URL:", url[i])
-    print("Playtime:", playtime[i] )
-    print("Random playtime:", playtimeRandom[i])
-    driver.get(url[i])
-    time.sleep(1)
-    video = driver.find_element_by_id('movie_player')
-    video.send_keys(Keys.SPACE) #hits space
-    time.sleep(1)
-    video.send_keys(Keys.SPACE) #hits space
-    time.sleep(playtimeRandom[i])
-    #time.sleep(1)
-    video.click()               #mouse click
-    #time.sleep(1)
-    
 driver.quit()                   #quit browser
+
+print("\nThank you for using video-bot. Bye !!")
+
