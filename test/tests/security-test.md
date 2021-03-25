@@ -2,7 +2,7 @@
 
 
 
-We have found there are multiple Docker Security tools (and we have listed them below), however, for this project we only focus on Docker-bench security
+We have found there are multiple Docker Security tools (and we have listed them below), however, for this project we only focus on Docker-bench security.
 
 ## Alphabetical index of Docker Security tools
 
@@ -39,6 +39,8 @@ We have found there are multiple Docker Security tools (and we have listed them 
 
 
 ## Docker Bench Security tools - Scanning result
+
+
 
 ##### Docker Bench for Security v1.3.4
 
