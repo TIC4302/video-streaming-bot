@@ -1,1 +1,3 @@
+VIDEOBOT (Automated random video traffic generator)
+
 VIDEOBOT is a software tool to generate video traffic by scrapping and playing random videos from youtube. It can be automatically deployed by using Docker on an Ubuntu VM. The implementation is simple/lightweight and highly scalable. You can deploy it on a tremendous number of clients through CLI execution.
