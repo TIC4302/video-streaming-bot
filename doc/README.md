@@ -1,4 +1,4 @@
-# Video Streaming Bot
+# Video Streaming Bot Design
 
 ## Overview
 
