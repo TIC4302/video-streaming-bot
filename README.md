@@ -10,10 +10,10 @@ VIDEOBOT is a software tool to generate video traffic by scrapping and playing r
 3.  Operation Guide
 4.  Security Benchmark and Hardening
 
-**Credit**
-TIC4302 Project Team 4
-Project Leader: Jon Koo
-Contributors: 
+**Credit**<br/>
+TIC4302 Project Team 4<br/>
+Project Leader: Jon Koo<br/>
+Contributors:<br/>
 Kok Suan<br/>
 Derrick Yap<br/>
 Stenley Ho<br/>
