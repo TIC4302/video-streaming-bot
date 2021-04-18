@@ -4,7 +4,7 @@
 
 The bot will take in 2 parameters:
 
-1. search query : this is the query to search Youtube videos.
+1. search query : this is the query to search on Youtube website.
 2. number of webpages : this is the number of webpages to search based on the search query.
 
 For example, the following means to search for 5 webpages of "hacking" videos :
