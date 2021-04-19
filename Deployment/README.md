@@ -28,7 +28,7 @@ $ docker --version
 ```
 Step 6: Build wwith the Docker file
 
-Downlaod the docker file and run this command
+Create a folser and downlaod the docker file into the folder and run this command
 ```console
 $ docker build . -t videobot:1
 ```
