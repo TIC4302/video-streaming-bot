@@ -1,0 +1,15 @@
+docker build . -t videobot:1		\\Build the docker image name videobot:1
+
+sudo docker run -it videobot:1	\\run a docker image after built
+
+sudo docker image ls	\\list docker images
+
+sudo docker ps  \\list docker process
+
+sudo docker exec -it "docker ID" sh	\\use shell in the docker image
+
+sudo docker stop $(sudo docker ps -aq)	\\stop docker process
+
+sudo docker rm $(sudo docker ps -aq)		\\remove docker process
+
+sudo docker run -itd --user=1000:1000 "image name"	\\(start docker with uid=1000:gid=1000)
