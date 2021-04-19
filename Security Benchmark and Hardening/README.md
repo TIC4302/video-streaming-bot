@@ -1,4 +1,4 @@
-**\docker bench\**
+**Docker bench**
 
 **Step 1**
 
