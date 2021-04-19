@@ -1,4 +1,4 @@
-## VIDEOBOT (Automated random video traffic generator)
+## VIDEOBOT (Automated Random Video Traffic Generator)
 
 **What is VIDEOBOT?**
 
