@@ -30,5 +30,5 @@ Step 6: Build with the Docker file
 
 Create a folder and download the docker file into the folder and run this command
 ```console
-$ docker build . -t videobot:1
+$ sudo docker build . -t videobot:1
 ```
