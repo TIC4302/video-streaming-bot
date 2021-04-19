@@ -28,7 +28,7 @@ $ docker --version
 ```
 Step 6: Build with the Docker file
 
-Create a folder and download the docker file into the folder and run this command
+Restart your machine. Create a folder and download the docker file into the folder and run this command
 ```console
-$ sudo docker build . -t videobot:1
+$ docker build . -t videobot:1
 ```
