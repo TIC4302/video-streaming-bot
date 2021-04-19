@@ -22,6 +22,6 @@ docker run --rm --net host --pid host --userns host --cap-add audit_control \
     --label docker_bench_security \
 
     docker/docker-bench-security
-    
+ \   
     **Step 2**
-    Refer to [Hardening Guide] for some tips on remediation
+    Refer to [Hardening Guide](https://github.com/TIC4302/video-streaming-bot/blob/master/Security%20Benchmark%20and%20Hardening/Hardening/Hardening%20Guide) for some tips on remediation
