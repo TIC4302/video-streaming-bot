@@ -1,6 +1,7 @@
 **\docker bench\**
 
 **Step 1**
+
 Run docker bench with the follwoing command.
 ```console
 docker run --rm --net host --pid host --userns host --cap-add audit_control \
@@ -23,5 +24,6 @@ docker run --rm --net host --pid host --userns host --cap-add audit_control \
 
     docker/docker-bench-security
  ```
-    **Step 2**
-    Refer to [Hardening Guide](https://github.com/TIC4302/video-streaming-bot/blob/master/Security%20Benchmark%20and%20Hardening/Hardening/Hardening%20Guide) for some tips on remediation
+**Step 2**
+    
+Refer to [Hardening Guide](https://github.com/TIC4302/video-streaming-bot/blob/master/Security%20Benchmark%20and%20Hardening/Hardening/Hardening%20Guide) for some tips on remediation
