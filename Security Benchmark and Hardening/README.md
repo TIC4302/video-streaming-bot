@@ -1,4 +1,7 @@
-\*docker bench*\
+**\docker bench\**
+
+**Step 1**
+Run docker bench with the follwoing command.
 
 docker run --rm --net host --pid host --userns host --cap-add audit_control \
 
@@ -19,3 +22,6 @@ docker run --rm --net host --pid host --userns host --cap-add audit_control \
     --label docker_bench_security \
 
     docker/docker-bench-security
+    
+    **Step 2**
+    Refer to [Hardening Guide] for some tips on remediation
