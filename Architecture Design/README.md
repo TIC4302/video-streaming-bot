@@ -13,11 +13,11 @@ It can also support many user friendly features as mentioned in the features sec
 
 The video streaming bot design consists of 3 functions namely System Pro, Video-Bot and Video-Play. System-Pro will provide the provisioning to create instances of the Video-Bot which will scrape for video links from a predefined website for Video-Play to stream the videos.
 
-![VideoStreamingBot-Design](./images/VideoStreamDesign-Page-1.jpg)
+![VideoStreamingBot-Design](https://github.com/TIC4302/video-streaming-bot/blob/master/doc/images/VideoStreamDesign-Page-1.jpg)
 
 Figure 1
 
-![VideoStreamingBot](./images/VideoStreamDesign-Page-2.jpg)
+![VideoStreamingBot](https://github.com/TIC4302/video-streaming-bot/blob/master/doc/images/VideoStreamDesign-Page-2.jpg)
 
 Figure 2. 
 Each swimlane indicate 4 different parts of workflow, the first section of the workflow is based on user&#39;s interaction, follow by provisioning workflow according to user&#39;s requirement, design and execution (either using lightweight Docker/Kubernetes solution, or Vagrant/Virtualbox combination, the third section is the actual play or execution of the video streaming bot. The final section is all these activities are recorded as network statistics.
