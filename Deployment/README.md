@@ -26,7 +26,7 @@ Step 5: Check Docker Version
 ```console
 $ docker --version
 ```
-Step 6: Build wwith the Docker file
+Step 6: Build with the Docker file
 
 Create a folser and downlaod the docker file into the folder and run this command
 ```console
