@@ -12,7 +12,7 @@ The bot will take in 2 parameters:
 For example, the following means to search and scrap video links from 5 webpages of "hacking" query :
 
 ```console
-$ python3 youtube_bot.py hacking 5
+$ sudo docker run -it videobot:1 youtube_bot.py hacking 5
 ```
 If you do not want to specify anything and let it run infinitely. Just enter this command:
 
