@@ -1,0 +1,42 @@
+**Section 1**
+This section will resolve the following warnings:
+1.5  - Ensure auditing is configured for the Docker daemon
+1.6  - Ensure auditing is configured for Docker files and directories - /var/lib/docker
+1.7  - Ensure auditing is configured for Docker files and directories - /etc/docker
+1.10  - Ensure auditing is configured for Docker files and directories - /etc/default/docker
+
+Remediation:
+1)	Install auditctl.
+sudo apt install auditd
+
+2)	Go to this directory and edit the audit.rule file
+cd  /etc/audit/rules.d
+nano audit rules
+
+3)	Add in the following rules and save the file.
+-w /usr/bin/docker -p wa
+-w /var/lib/docker -p wa
+-w /etc/docker -p wa
+-w /lib/systemd/system/docker.service -p wa
+-w /lib/systemd/system/docker.socket -p wa
+-w /etc/default/docker -p wa
+-w /etc/docker/daemon.json -p wa
+-w /usr/bin/docker-containerd -p wa
+-w /usr/bin/docker-runc -p wa
+
+4)	Restart the audit service
+systemctl restart auditd
+
+
+**Section 2**
+This section will resolve the following warning:
+2.14 - Ensure live restore is Enabled
+Remediation:
+1)	Create the /etc/docker/daemon.json if you do not have one. Edit the .json file to add in the following and save the file.
+{
+  "live-restore": true
+}
+2)	Restart the Docker daemon.
+systemctl reload docker
+
+
