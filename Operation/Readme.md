@@ -2,6 +2,8 @@
 
 ### User guide
 
+Download all the .py files and put them into the folder you created during the deployment step. 
+
 The bot will take in 2 parameters:
 
 1. search query : this is the query to search for videos on Youtube website.
