@@ -2,7 +2,7 @@
 
 ### User guide
 
-Download all the .py files and put them into the folder you created during the deployment step. 
+Download all the .py files and put them into the folder you created during the deployment step. Then you can activate the bot using the following commands.
 
 The bot will take in 2 parameters:
 
