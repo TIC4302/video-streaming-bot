@@ -2,6 +2,8 @@ docker build . -t videobot:1		\\Build the docker image name videobot:1
 
 sudo docker run -it videobot:1	\\run a docker image after built
 
+sudo docker run -it videobot:1 youtube_bot.py hacking 5	\\run bot that search for "hacking" for 5 pages
+
 sudo docker image ls	\\list docker images
 
 sudo docker ps  \\list docker process
