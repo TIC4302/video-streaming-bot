@@ -189,16 +189,18 @@ try:
             print("Playtime:", playtime[i] )
             print("Random playtime:", playtimeRandom[i],"secs")
             driver.get(url[i])
+            video = driver.find_element_by_id('movie_player')
+            video.click()               #mouse click
             #time.sleep(1)
             #driver.save_screenshot('./image'+str(i)+'.png')
             WebDriverWait(driver, 3).until(EC.presence_of_element_located((By.CSS_SELECTOR,'.ytp-mute-button')))
             #print(driver.find_element_by_css_selector('.ytp-mute-button').get_attribute('aria-label'))
-            if driver.find_element_by_css_selector('.ytp-mute-button').get_attribute('aria.label')=='Mute (m)':
-                #print("Original mute")
-                driver.find_element_by_css_selector('.ytp-mute-button').click()
-            else:
-                #print("Now mute")
-                pass
+            ##if driver.find_element_by_css_selector('.ytp-mute-button').get_attribute('aria.label')=='Mute (m)':
+                ##print("Original mute")
+            driver.find_element_by_css_selector('.ytp-mute-button').click()
+            ##else:
+                ##print("Now mute")
+                ##pass
             #video = driver.find_element_by_id('movie_player')
             #video.send_keys(Keys.SPACE) #hits space
             #video.click()               #mouse click
