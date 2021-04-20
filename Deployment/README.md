@@ -28,7 +28,7 @@ $ docker --version
 ```
 Step 6: Build with the Docker file
 
-Restart your machine. Create a folder and download the docker file and youtube_bot.py from Operation folder into the folder and run this command
+Restart your machine. Create a folder and download the docker file and youtube_bot.py from Operation folder into the newly created folder and run this command
 ```console
 $ docker build . -t videobot:1
 ```
