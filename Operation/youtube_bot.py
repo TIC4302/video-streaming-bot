@@ -138,7 +138,12 @@ for i in range(0,length):
 while len(playtime) > len(titles):
     del playtime[-1];
     
-
+if len(titles) != len(playtime):
+    driver.quit()
+    print("Bot experiencing trouble scrapping Youtube.")
+    print("Please refine your query and try again.")
+    print("Bot terminating.....\n")
+    sys.exit()
 
 ## use new arrays to form dictionary ##
 dict = { 'Titles':titles_actual, 'URL':links_actual, 'Time':playtime }
