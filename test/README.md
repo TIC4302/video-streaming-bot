@@ -71,23 +71,4 @@ Perform the following to create a docker
 - docker image name videobot with version/tag 1 is created
 - to run the newly built docker, execute the following command: sudo docker run -it --rm videobot:1 bash
 
-#### Test Case:  02 - Usage of Main.py
 
-Description: To test main functionality of program to show usage o
-
-- Run python3 main.py with -h arguments
-
-Input: -h
-Expected Output: 
-
-Usage:
-test.py -i <number of instance> -l <length of play time>
-
-Options:
--i, --inst       : specify number of docker instance to run
-
--l, --lplay      : specify length of play time to run in minutes
-
--u, --url        : specify url page or first landing page
-
-![Test Case 02](./images/image-20210225215433.jpg) 
