@@ -37,7 +37,7 @@ Step 7: Build with the Bash Script
 
 Go into video-streaming-bot folder, set the script with executable permission and run the script
 ```console
-$ chmod +X build.sh
+$ chmod +x build.sh
 $ ./build.sh
 ```
 
