@@ -22,14 +22,22 @@ Step 4: Set User Privileges
 ```console
 $ sudo usermod -aG docker yourname
 ```
-Step 5: Check Docker Version
+Step 5: Check Docker Version and restart your machine.
 
 ```console
 $ docker --version
 ```
-Step 6: Build with the Docker file
+Step 6: Clone from Github
 
-Restart your machine. Create a folder and download the docker file and youtube_bot.py from Operation folder into the newly created folder and run this command
+Clone this repository to the current local directory
 ```console
-$ docker build . -t videobot:1
+$ git clone https://github.com/TIC4302/video-streaming-bot.git
 ```
+Step 7: Build with the Bash Script
+
+Go into video-streaming-bot folder, set the script with executable permission and run the script
+```console
+$ chmod +X build.sh
+$ ./build.sh
+```
+
