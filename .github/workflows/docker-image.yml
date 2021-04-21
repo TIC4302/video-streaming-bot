@@ -15,4 +15,4 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: cd Deployment; docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+      run: cd Deployment; cp ../Operation/youtube_bot.py .;docker build . --file Dockerfile --tag my-image-name:$(date +%s)
