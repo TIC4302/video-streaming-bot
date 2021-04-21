@@ -33,7 +33,7 @@ RUN apt-get install -y --no-install-recommends \
 	usermod -a -G audio,video vlc && \
 	rm -rf /var/lib/apt/lists/*
 
-ADD youtube_bot.py /home/youtube_bot.py
+ADD ./Operation/youtube_bot.py /home/youtube_bot.py
 COPY . .
 USER vlc
 #CMD ["bash"] #uncomment if want to use bash in docker for troubleshooting
