@@ -12,7 +12,7 @@ VIDEOBOT is a software tool to generate video traffic by scrapping and playing r
 5.  [Demo](https://github.com/TIC4302/video-streaming-bot/blob/master/Architecture%20Design/Videos.md)
 
 **Credit**<br/>
-TIC4302 Project Team 4<br/>
+TIC4302 Project Team B<br/>
 Project Leader: Jon Koo<br/>
 Contributors:<br/>
 Koh Kok Suan<br/>
