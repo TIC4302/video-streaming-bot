@@ -18,3 +18,13 @@ Contributors:<br/>
 Koh Kok Suan<br/>
 Derrick Yap<br/>
 Stenley Ho<br/>
+
+
+## Contribution
+
+Please check the [CONTRIBUTING](CONTRIBUTING.md) file for the detail.
+
+## License
+
+All code in this repository is under the Apache Software Foundation License, 2.0. 
+Please check the [LICENSE](LICENSE) file for the detail.
