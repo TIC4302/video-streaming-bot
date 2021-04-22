@@ -85,6 +85,7 @@ Perform the following to create a docker
 
   - sudo ctop
     ![image-20210422124650066](C:\Users\knz\AppData\Roaming\Typora\typora-user-images\image-20210422124650066.png)
+      ![ctop](./images/ctop.jpg)
 
 - Run the newly built docker : docker run -it videobot:1 youtube_bot.py "star wars" 4
 
@@ -92,6 +93,6 @@ Perform the following to create a docker
 
   In the above terminal Docker shows it is running, and ctop shows the bandwidth utilization of the container below
 
-  ![image-20210422124840310](C:\Users\knz\AppData\Roaming\Typora\typora-user-images\image-20210422124840310.png)
+  ![Dockerctop](./images/dockerctop.jpg)
 
 - Testing successful
