@@ -69,6 +69,29 @@ Perform the following to create a docker
 
 
 - docker image name videobot with version/tag 1 is created
+
 - to run the newly built docker, execute the following command: sudo docker run -it --rm videobot:1 bash
 
+  
 
+#### Test Case:  01 - Docker Testing
+
+- Install CTOP following the steps below
+
+  - sudo wget https://github.com/bcicen/ctop/releases/download/v0.7.1/ctop-0.7.1-linux-amd64  -O /usr/local/bin/ctop
+  - sudo chmod +x /usr/local/bin/ctop
+
+- Run ctop by issuing this command:
+
+  - sudo ctop
+    ![image-20210422124650066](C:\Users\knz\AppData\Roaming\Typora\typora-user-images\image-20210422124650066.png)
+
+- Run the newly built docker : docker run -it videobot:1 youtube_bot.py "star wars" 4
+
+- Docker and ctop running together
+
+  In the above terminal Docker shows it is running, and ctop shows the bandwidth utilization of the container below
+
+  ![image-20210422124840310](C:\Users\knz\AppData\Roaming\Typora\typora-user-images\image-20210422124840310.png)
+
+- Testing successful
